@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Wordle Clone</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <script src="https://unpkg.com/htmx.org@2.0.1"
+            integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
+            crossorigin="anonymous"></script>
+</head>
+<body class="container">
+
+<div class="output-container">
+
+    <div id="game"></div>
+
+    <form hx-post="/submit-word" hx-target="#game" hx-swap="beforeend" hx-on::after-request="this.reset()">
+        <div class="character-container">
+            <input id="char1" name="char1" type="text" pattern="[a-zA-Z]{1}" maxlength="1" class="character character-input">
+            <input id="char2" name="char2" type="text" pattern="[a-zA-Z]{1}" maxlength="1" class="character character-input">
+            <input id="char3" name="char3" type="text" pattern="[a-zA-Z]{1}" maxlength="1" class="character character-input">
+            <input id="char4" name="char4" type="text" pattern="[a-zA-Z]{1}" maxlength="1" class="character character-input">
+            <input id="char5" name="char5" type="text" pattern="[a-zA-Z]{1}" maxlength="1" class="character character-input">
+        </div>
+
+        <div class="character-container">
+            <button type="submit">
+                Submit
+            </button>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>

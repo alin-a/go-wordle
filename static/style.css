@@ -1,0 +1,86 @@
+
+:root {
+    --dark-colour: #0f172a;
+    --dark-focus-colour: #e11d48;
+    --light-colour: #f1f5f9;
+    --grey-colour: #aaaaaa;
+    --grey-accent-colour: #6a6a6a;
+    --green-colour: #9ccc65;
+    --green-accent-colour: #4c7c15;
+    --yellow-colour: #f8cf38;
+    --yellow-accent-colour: #bb9000;
+}
+
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.output-container {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.character-container {
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    gap: 5px;
+}
+
+.character {
+    width: 50px;
+    height: 50px;
+    padding: 1em;
+    font-weight: 700;
+    color: var(--light-colour);
+    text-align: center;
+    border-radius: 10px;
+    border-width: 10px;
+    border-style: solid;
+}
+
+.character-grey {
+    background-color: var(--grey-colour);
+    border-color: var(--grey-accent-colour);
+}
+
+.character-empty {
+    background-color: var(--light-colour);
+    border-color: var(--dark-colour);
+}
+
+.character-input {
+    color: var(--dark-colour);
+    background-color: var(--light-colour);
+    border-color: var(--dark-colour);
+    font-size: 40px;
+}
+
+.character-input:focus {
+    border-color: var(--dark-focus-colour);
+    outline: none;
+}
+
+.character-green {
+    background-color: var(--green-colour);
+    border-color: var(--green-accent-colour);
+}
+
+.character-yellow {
+    background-color: var(--yellow-colour);
+    border-color: var(--yellow-accent-colour);
+}
+
+button {
+    width: 180px;
+    height: 80px;
+    padding: 1em;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 10px;
+    border: 10px solid var(--dark-colour) ;
+    font-size: 20px;
+    color: var(--dark-colour);
+    margin-top: 1em;
+}
