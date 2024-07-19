@@ -2,6 +2,7 @@
 :root {
     --dark-colour: #0f172a;
     --dark-focus-colour: #e11d48;
+    --light-focus-colour: #f1879d;
     --light-colour: #f1f5f9;
     --grey-colour: #aaaaaa;
     --grey-accent-colour: #6a6a6a;
@@ -26,6 +27,7 @@
     font-size: 40px;
     justify-content: center;
     gap: 5px;
+    margin-bottom: 5px;
 }
 
 .character {
@@ -62,6 +64,11 @@
     outline: none;
 }
 
+.character-input:hover {
+    border-color: var(--light-focus-colour);
+    outline: none;
+}
+
 .character-green {
     background-color: var(--green-colour);
     border-color: var(--green-accent-colour);
@@ -81,6 +88,11 @@ button {
     border-radius: 10px;
     border: 10px solid var(--dark-colour) ;
     font-size: 20px;
-    color: var(--dark-colour);
+    color: var(--light-colour);
     margin-top: 1em;
+    background-color: var(--light-focus-colour)
+}
+
+button:hover {
+    border-color: var(--dark-focus-colour);
 }

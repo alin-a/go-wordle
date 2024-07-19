@@ -13,21 +13,22 @@
 
 <div class="output-container">
 
-    <div id="game"></div>
-
-    <form hx-post="/submit-word" hx-target="#game" hx-swap="beforeend" hx-on::after-request="this.reset()">
+    <form hx-post="/submit-word">
         <div class="character-container">
-            <input id="char1" name="char1" type="text" pattern="[a-zA-Z]{1}" maxlength="1" class="character character-input">
-            <input id="char2" name="char2" type="text" pattern="[a-zA-Z]{1}" maxlength="1" class="character character-input">
-            <input id="char3" name="char3" type="text" pattern="[a-zA-Z]{1}" maxlength="1" class="character character-input">
-            <input id="char4" name="char4" type="text" pattern="[a-zA-Z]{1}" maxlength="1" class="character character-input">
-            <input id="char5" name="char5" type="text" pattern="[a-zA-Z]{1}" maxlength="1" class="character character-input">
+            <input id="char1" name="char1" type="text" pattern="[a-zA-Z]{1}" maxlength="1"
+                   class="character character-input" oninput="this.value = this.value.toUpperCase()">
+            <input id="char2" name="char2" type="text" pattern="[a-zA-Z]{1}" maxlength="1"
+                   class="character character-input" oninput="this.value = this.value.toUpperCase()">
+            <input id="char3" name="char3" type="text" pattern="[a-zA-Z]{1}" maxlength="1"
+                   class="character character-input" oninput="this.value = this.value.toUpperCase()">
+            <input id="char4" name="char4" type="text" pattern="[a-zA-Z]{1}" maxlength="1"
+                   class="character character-input" oninput="this.value = this.value.toUpperCase()">
+            <input id="char5" name="char5" type="text" pattern="[a-zA-Z]{1}" maxlength="1"
+                   class="character character-input" oninput="this.value = this.value.toUpperCase()">
         </div>
 
         <div class="character-container">
-            <button type="submit">
-                Submit
-            </button>
+            <button type="submit">Prüfen</button>
         </div>
     </form>
 

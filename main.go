@@ -19,6 +19,7 @@ type WordleGame interface {
 
 func main() {
 	flag.StringVar(&modus, "modus", "web", "game modus, either web oder console")
+	flag.Usage()
 	flag.Parse()
 
 	db, err := sql.Open("sqlite3", "words.db")
